@@ -1,0 +1,242 @@
+/* Cores e configurações gerais */
+:root {
+    --roxo: #6b4c9a;
+    --roxo-escuro: #392653;
+    --lilas: #eee5fa;
+    --dourado: #d6ad52;
+    --creme: #fffdf8;
+    --texto: #393044;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background-color: #f7f2fc;
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #4a326c, #8061ad);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 4px solid var(--dourado);
+}
+
+#titulo-principal {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: white;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+.decoracao {
+    color: #f4d990;
+    letter-spacing: 5px;
+}
+
+/* Conteúdo */
+main {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+/* Cartões das seções */
+section {
+    background-color: var(--creme);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e6daf5;
+    box-shadow: 0 5px 15px rgba(76, 49, 108, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(76, 49, 108, 0.12);
+}
+
+/* Títulos */
+h2 {
+    color: var(--roxo);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #d9c58e;
+}
+
+/* Perfil */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.perfil img {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 3px solid var(--dourado);
+    padding: 4px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.perfil img:hover {
+    transform: rotate(-3deg) scale(1.03);
+}
+
+.perfil p {
+    flex: 1;
+}
+
+/* Listas */
+ul,
+ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+    padding-left: 4px;
+}
+
+li::marker {
+    color: var(--dourado);
+}
+
+/* Hobby em destaque */
+.destaque {
+    color: var(--roxo);
+    font-weight: bold;
+    background-color: var(--lilas);
+    border-radius: 7px;
+    padding: 5px 8px;
+}
+
+ul li {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+ul li:hover {
+    color: var(--roxo);
+    transform: translateX(5px);
+}
+
+/* Cartão especial do StoryFlow */
+.projeto {
+    background: linear-gradient(135deg, #eee5fa, #fffaf0);
+    border: 2px solid #d6c3ee;
+    position: relative;
+}
+
+.projeto h2 {
+    color: var(--roxo-escuro);
+}
+
+.projeto strong {
+    color: var(--roxo);
+}
+
+.projeto a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: var(--roxo);
+    color: white;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.projeto a:hover {
+    background-color: var(--roxo-escuro);
+    transform: translateY(-2px);
+}
+
+.aviso {
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--roxo-escuro);
+    color: rgb(244, 165, 255);
+    text-align: center;
+    padding: 28px 20px;
+    border-top: 4px solid var(--dourado);
+}
+
+footer a {
+    display: inline-block;
+    color: #f4d990;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #ada5b9;
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    #titulo-principal {
+        font-size: 1.6rem;
+    }
+
+    main {
+        padding: 0 14px;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil img {
+        width: 180px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
